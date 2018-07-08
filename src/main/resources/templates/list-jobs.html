@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/">
+<html xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <head th:replace="fragments :: head">
 </head>
 <body>
@@ -11,6 +11,8 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #3 - Use the same list display from search.html -->
+
+    <h3 th:text="${#lists.size(jobs)} + ' Result(s)'">...</h3>
 
     <table class="job-listing" th:each="job : ${jobs}">
 

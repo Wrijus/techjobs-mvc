@@ -38,13 +38,14 @@
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
 
+                    <!-- results counter -->
     <div th:if="${resultsCounter}">
          <h3 th:text="${resultsCounter} + ' Result(s)'">...</h3>
     </div>
     <div th:if="${resultsCounter} == 0">
         <h3 th:text="'I am sorry Dave there are 0 Result(s) in my Data!'"></h3>
     </div>
-
+                    <!-- main loop and display -->
     <table class="job-listing" th:each="job : ${jobs}">
 
         <tr th:each="field : ${job}">
